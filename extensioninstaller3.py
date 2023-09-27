@@ -41,7 +41,7 @@ if colaboptions:
   currentbranch = colaboptions["branch"]
   filename = colaboptions["filename"]
 
-colabpath = f"/content/camendurus/{currentbranch}/{filename}"
+colabpath = f"/cpmmon/kame/{currentbranch}/{filename}"
 if debugmode==True:
     colabpath = r"C:\Users\Ethereal\Downloads\526_mix_webui_colab.ipynb"
 
