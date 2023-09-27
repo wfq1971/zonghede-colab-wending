@@ -1,6 +1,6 @@
 import subprocess
 
-repo_path = '/content/volatile-concentration-localux'
+repo_path = '/common/cswpf'
 
 codetorun = """
 !git clone https://github.com/camenduru/stable-diffusion-webui-colab /common/kame
