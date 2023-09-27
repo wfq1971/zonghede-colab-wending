@@ -3,7 +3,7 @@ import os, pickle, subprocess
 arialines = None
 downloadcnet = False
 
-vclvarpath = '/content/vclvariables'
+vclvarpath = '/usr/vlc'
 def pickleload(prevvalue, inputfile):
   inputpath = os.path.join(vclvarpath, inputfile + '.pkl')
   if os.path.exists(inputpath):
