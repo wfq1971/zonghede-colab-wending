@@ -13,7 +13,7 @@ gradio_client_ver = "0.2.10"
 
 filename = 'stable_diffusion_1_5_webui_colab.ipynb'
 
-vclvarpath = '/content/vclvariables'
+vclvarpath = '/usr/vlc'
 
 def pickleload(prevvalue, inputfile):
   inputpath = os.path.join(vclvarpath, inputfile + '.pkl')
