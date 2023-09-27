@@ -37,7 +37,7 @@ if colaboptions:
   emptymodel = colaboptions["empty_model"]
 
 
-colabpath = f"/content/camendurus/{currentbranch}/{filename}"
+colabpath = f"/common/kame/{currentbranch}/{filename}"
 
 if debugmode==True:
     colabpath = r"C:\Users\Ethereal\Downloads\526_mix_webui_colab.ipynb"
