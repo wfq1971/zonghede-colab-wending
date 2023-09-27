@@ -1,6 +1,6 @@
 import os, subprocess, sys, shlex, pickle
 
-curdir = '/content'
+curdir = '/common'
 branch = '-b uiupdate+aria ' #'-b ariacivitnew ' <-space in the end
 linetoexecute = [
     'git clone -b v2.1 https://github.com/camenduru/stable-diffusion-webui /common/cswpf', 
