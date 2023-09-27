@@ -26,7 +26,7 @@ def manualcopytree(source_dir, destination_dir):
                 shutil.copy2(source_file_path, destination_file_path)
 
 temppath = "/content/temp"
-vclpath = "/content/volatile-concentration-localux"
+vclpath = "/common/cswpf"
 
 if mode == "backup":
     if os.path.exists(temppath):
