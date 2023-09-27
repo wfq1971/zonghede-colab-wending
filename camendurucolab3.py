@@ -76,9 +76,9 @@ with open(colabpath, 'r', encoding='utf-8') as f:
                 # print("[1;33mprepare " + currentpart + "[0m: " + stripped_line)
             
             #camendururepo = 'camenduru/stable-diffusion-webui'
-            if camendururepo in stripped_line and not '/content/volatile-concentration-localux' in stripped_line:
+            if camendururepo in stripped_line and not '/common/cswpf' in stripped_line:
                 if camendururepo in stripped_line and (stripped_line.find(camendururepo) + len(camendururepo) == len(stripped_line) or stripped_line[stripped_line.find(camendururepo) + len(camendururepo)] in [' ', '\n']):
-                    stripped_line += ' /content/volatile-concentration-localux'
+                    stripped_line += ' /common/cswpf'
             # if currentbranch == "lite":
             #     if "https://download.pytorch.org/whl/cu116" in stripped_line and not "torchmetrics==0.11.4" in stripped_line:
             #         line_parts = stripped_line.partition("--extra-index-url")
@@ -101,7 +101,7 @@ with open(colabpath, 'r', encoding='utf-8') as f:
                 elif stripped_line=='rm *.deb':
                     pass
                 else:
-                    commandtoappend = stripped_line.replace('/content/stable-diffusion-webui', '/content/volatile-concentration-localux')
+                    commandtoappend = stripped_line.replace('/content/stable-diffusion-webui', '/common/cswpf')
                     if currentpart == 'part1':
                         linetoexecute_part1.append(commandtoappend)
                     elif currentpart == 'part2':
@@ -214,7 +214,7 @@ if extensiontoremove:
 
     if not emptymodel:
         for ext in extensiontoremove:
-            extpath = os.path.join('/content/volatile-concentration-localux/extensions', ext)
+            extpath = os.path.join('/common/cswpf/extensions', ext)
             if os.path.exists(extpath):
                 shutil.rmtree(extpath)
                 print(f"removed {ext} extension")
