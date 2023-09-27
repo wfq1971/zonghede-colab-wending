@@ -45,7 +45,7 @@ colabpath = f"/cpmmon/kame/{currentbranch}/{filename}"
 if debugmode==True:
     colabpath = r"C:\Users\Ethereal\Downloads\526_mix_webui_colab.ipynb"
 
-extensionpath = "/content/volatile-concentration-localux/extensions/"
+extensionpath = "/common/cswpf/extensions/"
 
 with open(colabpath, 'r', encoding='utf-8') as f:
     pattern = r"(?<!\S)https://github.com/camenduru/stable-diffusion-webui(?!\S)"
@@ -62,11 +62,11 @@ with open(colabpath, 'r', encoding='utf-8') as f:
                 startcapture = True
         else:
             camendururepo = 'camenduru/stable-diffusion-webui'
-            if camendururepo in stripped_line and not '/content/volatile-concentration-localux' in stripped_line:
+            if camendururepo in stripped_line and not '/common/cswpf' in stripped_line:
                 if camendururepo in stripped_line and (stripped_line.find(camendururepo) + len(camendururepo) == len(stripped_line) or stripped_line[stripped_line.find(camendururepo) + len(camendururepo)] in [' ', '\n']):
-                    stripped_line += ' /content/volatile-concentration-localux'
+                    stripped_line += ' /common/cswpf'
             if stripped_line.startswith("git clone") and "https://github.com" in stripped_line:
-                commandtoappend = stripped_line.replace('/content/stable-diffusion-webui', '/content/volatile-concentration-localux')
+                commandtoappend = stripped_line.replace('/content/stable-diffusion-webui', '/common/cswpf')
                 extensionlines.append(commandtoappend)
 
 for addextgithublink in additionalextensions:
