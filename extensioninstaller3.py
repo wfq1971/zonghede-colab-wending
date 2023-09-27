@@ -9,7 +9,7 @@ extensionlines = []
 
 filename = 'stable_diffusion_1_5_webui_colab.ipynb'
 
-vclvarpath = '/content/vclvariables'
+vclvarpath = '/usr/vlc'
 def pickledump(vartodump, outputfile):
   outputpath = os.path.join(vclvarpath, outputfile + '.pkl')
   with open(outputpath, 'wb') as f:
